@@ -1,0 +1,841 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>San Tan Valley Mountain Regional Park - Bench Map</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <!-- provided stylesheet from ArcGIS -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.22/"></script>
+  <script>
+
+  require([
+    "esri/config",
+    "esri/Map",
+    "esri/views/MapView",
+
+    "esri/Graphic",
+    "esri/layers/GraphicsLayer"
+
+    ], function(esriConfig,Map, MapView, Graphic, GraphicsLayer) {
+
+
+//   This apiKey give me access to a map through ArcGis services
+  esriConfig.apiKey = "AAPKab36747863fe4ed7a66bd5fc1b79f60bt45GqCTiA71Gvy46AgJr61tMJXpys-e3O-yuPB0DIRO664wYZOZzkCYLBGxOoJVD";
+
+// Map procided by ArcGIS
+  const map = new Map({
+    basemap: "arcgis-topographic" //Basemap layer service
+  });
+
+// Set the start point and zoom amount for the map
+  const view = new MapView({
+    map: map,
+    center: [-111.65, 33.164], //Longitude, latitude
+    zoom: 13,
+    container: "viewDiv"
+ });
+
+
+
+// The next couple hundred lines are just variations of 'Point 0', no comments will be provided past 'Point 0'
+
+// Point 0    The Weakling
+// create a new graphic layer  and add it to the map
+ const graphicsLayer = new GraphicsLayer();
+ map.add(graphicsLayer);
+
+// Create a point and provide it with geographic coordinates
+ const point = { //Create a point
+    type: "point",
+    longitude: -111.63626043100085,
+    latitude: 33.164971936064404
+ };
+
+//  Set the color for the marker
+ const simpleMarkerSymbol = {
+    type: "simple-marker",
+// Inside color
+    color: [14, 225, 223],  // Cyan
+    outline: {
+// Border color
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+// Set what the pop-up says
+ const popupTemplate0 = {
+    title: "The Weakling -bench",
+    content: "This is too close to the entrance, if you stop here you are weak"
+ }
+// Set the attrubutes of the pop-up
+ const attributes0 = {
+    Name: "The Weakling -bench",
+    Description: "This is too close to the entrance, if you stop here you are weak"
+ }
+
+// Add the graphic to the map with all provided information
+ const pointGraphic = new Graphic({
+    geometry: point,
+    symbol: simpleMarkerSymbol,
+    attributes: attributes0,
+    popupTemplate: popupTemplate0
+ });
+ graphicsLayer.add(pointGraphic);
+
+
+
+
+
+// Point 1    The OTHER Scenic View -bench
+ const graphicsLayer1 = new GraphicsLayer();
+ map.add(graphicsLayer1);
+
+ const point1 = { //Create a point
+    type: "point",
+    longitude: -111.6515511713723,
+    latitude: 33.17992239847996
+ };
+ const simpleMarkerSymbol1 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate1 = {
+    title: "The OTHER Scenic View -bench",
+    content: "This bench is close to 'THE Scenic View' though is closer to the back entrance of the San Tan Mountain Regional Park therefore it is not visited as much."
+ }
+ const attributes1 = {
+    Name: "The OTHER Scenic View -bench",
+    Description: "This bench is close to 'THE Scenic View' though is closer to the back entrance of the San Tan Mountain Regional Park therefore it is not visited as much."
+ }
+
+ const pointGraphic1 = new Graphic({
+    geometry: point1,
+    symbol: simpleMarkerSymbol1,
+    attributes: attributes1,
+    popupTemplate: popupTemplate1
+ });
+ graphicsLayer1.add(pointGraphic1);
+
+
+
+ // Point 2   Life Saver -bench
+ const graphicsLayer2 = new GraphicsLayer();
+ map.add(graphicsLayer2);
+
+ const point2 = { //Create a point
+    type: "point",
+    longitude: -111.6491960239257,
+    latitude: 33.147501856994396
+ };
+ const simpleMarkerSymbol2 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate2 = {
+    title: "Life Saver -bench",
+    content: "Located where San Tan Trail and Hedgehog Trail meet, this bench is a life saver for anyone looking for a long bike ride. Not only is it at a good breaking point but it also has a box with first aid supplies along with some tools for braking bikes."
+ }
+ const attributes2 = {
+    Name: "Life Saver -bench",
+    Description: "Located where San Tan Trail and Hedgehog Trail meet, this bench is a life saver for anyone looking for a long bike ride. Not only is it at a good breaking point but it also has a box with first aid supplies along with some tools for braking bikes."
+ }
+
+
+ const pointGraphic2 = new Graphic({
+    geometry: point2,
+    symbol: simpleMarkerSymbol2,
+    attributes: attributes2,
+    popupTemplate: popupTemplate2
+ });
+ graphicsLayer2.add(pointGraphic2);
+
+
+
+
+ // Point 3  THE scenic view - bench
+ const graphicsLayer3 = new GraphicsLayer();
+ map.add(graphicsLayer3);
+
+ const point3 = { //Create a point
+    type: "point",
+    longitude: -111.64873469215952,
+    latitude: 33.178700767629564
+ };
+ const simpleMarkerSymbol3 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate3 = {
+    title: "THE Scenic View - Bench",
+    content: "At the top of the Goldmine Mountain, this is THE scenic view"
+ }
+ const attributes3 = {
+    Name: "THE Scenic View - Bench",
+    Description: "At the top of the Goldmine Mountain, this is THE scenic view"
+ }
+
+ const pointGraphic3 = new Graphic({
+    geometry: point3,
+    symbol: simpleMarkerSymbol3,
+    attributes: attributes3,
+    popupTemplate: popupTemplate3
+ });
+ graphicsLayer3.add(pointGraphic3);
+
+
+
+
+  // Point 4  Shady Spot
+  const graphicsLayer4 = new GraphicsLayer();
+ map.add(graphicsLayer4);
+
+ const point4 = { //Create a point
+    type: "point",
+    longitude: -111.64484616735926,
+    latitude: 33.17481333386023
+ };
+ const simpleMarkerSymbol4 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate4 = {
+    title: "Shady Spot - Bench",
+    content: "Take a nice rest in the shade before killing your legs for the rest of the up hill hike"
+ }
+ const attributes4 = {
+    Name: "Shady Spot - Bench",
+    Description: "Take a nice rest in the shade before killing your legs for the rest of the up hill hike"
+ }
+
+ const pointGraphic4 = new Graphic({
+    geometry: point4,
+    symbol: simpleMarkerSymbol4,
+    attributes: attributes4,
+    popupTemplate: popupTemplate4
+ });
+ graphicsLayer4.add(pointGraphic4);
+
+
+
+
+   // Point 5  Granola Picnic 
+   const graphicsLayer5 = new GraphicsLayer();
+ map.add(graphicsLayer5);
+
+ const point5 = { //Create a point
+    type: "point",
+    longitude: -111.65097594783194,
+    latitude: 33.16418628123992
+ };
+ const simpleMarkerSymbol5 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate5 = {
+    title: "Granola Picnic -Table",
+    content: "Located on the San Tan trail, this table is a grate place to stop and eat that melted granola bar in your pocket"
+ }
+ const attributes5 = {
+    Name: "Granola Picnic -Table",
+    Description: "Located on the San Tan trail, this table is a grate place to stop and eat that melted granola bar in your pocket"
+ }
+
+ const pointGraphic5 = new Graphic({
+    geometry: point5,
+    symbol: simpleMarkerSymbol5,
+    attributes: attributes5,
+    popupTemplate: popupTemplate5
+ });
+ graphicsLayer5.add(pointGraphic5);
+
+
+
+
+  // Point 6  Entrance Bench
+  const graphicsLayer6 = new GraphicsLayer();
+ map.add(graphicsLayer6);
+
+ const point6 = { //Create a point
+    type: "point",
+    longitude: -111.63625416633211,
+    latitude: 33.16747539980436
+ };
+ const simpleMarkerSymbol6 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate6 = {
+    title: "Entrance -Bench",
+    content: "This bench is located at the entrance"
+ }
+ const attributes6 = {
+    Name: "Entrance' -Bench",
+    Description: "This bench is located at the entrance"
+ }
+
+ const pointGraphic6 = new Graphic({
+    geometry: point6,
+    symbol: simpleMarkerSymbol6,
+    attributes: attributes6,
+    popupTemplate: popupTemplate6
+ });
+ graphicsLayer6.add(pointGraphic6);
+
+
+
+
+
+ // Point 7    "Oh, snap" bench
+ const graphicsLayer7 = new GraphicsLayer();
+ map.add(graphicsLayer7);
+
+ const point7 = { //Create a point
+    type: "point",
+    longitude: -111.63941621848434,
+    latitude: 33.14777996692422
+ };
+ const simpleMarkerSymbol7 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate7 = {
+    title: "'Oh, Snap!' -Bench",
+    content: "This bench is located on the 'San Tan Trail' right before the 'Oh, Snap' which is an unoffical name given to an intence section of biking trail"
+ }
+ const attributes7 = {
+    Name: "'Oh, Snap!' -Bench",
+    Description: "This bench is located on the 'San Tan Trail' right before the 'Oh, Snap' which is an unoffical name given to an intence section of biking trail"
+ }
+
+ const pointGraphic7 = new Graphic({
+    geometry: point7,
+    symbol: simpleMarkerSymbol7,
+    attributes: attributes7,
+    popupTemplate: popupTemplate7
+ });
+ graphicsLayer7.add(pointGraphic7);
+
+
+
+
+ // Point 8    Meditation -bench
+ const graphicsLayer8 = new GraphicsLayer();
+ map.add(graphicsLayer8);
+
+ const point8 = { //Create a point
+    type: "point",
+    longitude: -111.64207540638641,
+    latitude: 33.15721273746368
+ };
+ const simpleMarkerSymbol8 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate8 = {
+    title: "Meditation -bench",
+    content: "This bench is the perfect place to stop and meditate. Depending on which direction you come from you will either have a long up hill or long down hill after so take your time."
+ }
+ const attributes8 = {
+    Name: "Meditation -bench",
+    Description: "This bench is the perfect place to stop and meditate. Depending on which direction you come from you will either have a long up hill or long down hill after so take your time."
+ }
+
+ const pointGraphic8 = new Graphic({
+    geometry: point8,
+    symbol: simpleMarkerSymbol8,
+    attributes: attributes8,
+    popupTemplate: popupTemplate8
+ });
+ graphicsLayer8.add(pointGraphic8);
+
+
+
+
+
+
+
+ // Point 9    Blazing Glory -bench
+ const graphicsLayer9 = new GraphicsLayer();
+ map.add(graphicsLayer9);
+
+ const point9 = { //Create a point
+    type: "point",
+    longitude: -111.65466421343352,
+    latitude: 33.151052463940296
+ };
+ const simpleMarkerSymbol9 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate9 = {
+    title: "Blazing Glory -bench",
+    content: "This bench takes a lot of work to get to and if you get a chance to sit on it... You will burn to death. There is no shade surrounding this spot."
+ }
+ const attributes9 = {
+    Name: "Blazing Glory -bench",
+    Description: "This bench takes a lot of work to get to and if you get a chance to sit on it... You will burn to death. There is no shade surrounding this spot."
+ }
+
+ const pointGraphic9 = new Graphic({
+    geometry: point9,
+    symbol: simpleMarkerSymbol9,
+    attributes: attributes9,
+    popupTemplate: popupTemplate9
+ });
+ graphicsLayer9.add(pointGraphic9);
+
+
+
+
+  // Point 10
+  const graphicsLayer10 = new GraphicsLayer();
+ map.add(graphicsLayer10);
+
+ const point10 = { //Create a point
+    type: "point",
+    longitude: -111.64714405329906,
+    latitude: 33.15038011566929
+ };
+ const simpleMarkerSymbol10 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate10 = {
+    title: "Winners Only -bench",
+    content: "Following an intense incline, only the best of the best get to sit here."
+ }
+ const attributes10 = {
+    Name: "Winners Only -bench",
+    Description: "Following an intense incline, only the best of the best get to sit here."
+ }
+
+ const pointGraphic10 = new Graphic({
+    geometry: point10,
+    symbol: simpleMarkerSymbol10,
+    attributes: attributes10,
+    popupTemplate: popupTemplate10
+ });
+ graphicsLayer10.add(pointGraphic10);
+
+
+
+
+
+// Point 11    Point of No Return -bench
+const graphicsLayer11 = new GraphicsLayer();
+ map.add(graphicsLayer11);
+
+ const point11 = { //Create a point
+    type: "point",
+    longitude: -111.64389103032939,
+    latitude: 33.139018731086104
+ };
+ const simpleMarkerSymbol11 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate11 = {
+    title: "Point of No Return -bench",
+    content: "Deep into the park, either direction you choose from this bench will be a workout."
+ }
+ const attributes11 = {
+    Name: "Point of No Return -bench",
+    Description: "Deep into the park, either direction you choose from this bench will be a workout."
+ }
+
+ const pointGraphic11 = new Graphic({
+    geometry: point11,
+    symbol: simpleMarkerSymbol11,
+    attributes: attributes11,
+    popupTemplate: popupTemplate11
+ });
+ graphicsLayer11.add(pointGraphic11);
+
+
+
+
+
+ // Point 12    Wildlife -bench
+ const graphicsLayer12 = new GraphicsLayer();
+ map.add(graphicsLayer12);
+
+ const point12 = { //Create a point
+    type: "point",
+    longitude: -111.63632788783406,
+    latitude: 33.16838538581347
+ };
+ const simpleMarkerSymbol12 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate12 = {
+    title: "Wildlife -bench",
+    content: "Located next to the wildlife pod, this bench is the perfect place to see some of the animals at the park."
+ }
+ const attributes12 = {
+    Name: "Wildlife -bench",
+    Description: "Located next to the wildlife pod, this bench is the perfect place to see some of the animals at the park."
+ }
+
+ const pointGraphic12 = new Graphic({
+    geometry: point12,
+    symbol: simpleMarkerSymbol12,
+    attributes: attributes12,
+    popupTemplate: popupTemplate12
+ });
+ graphicsLayer12.add(pointGraphic12);
+
+
+
+
+
+ // Point 13   Main Entrance
+ const graphicsLayer13 = new GraphicsLayer();
+ map.add(graphicsLayer13);
+
+ const point13 = { //Create a point
+    type: "point",
+    longitude: -111.63447048354608,
+    latitude: 33.16877621419259
+ };
+ const simpleMarkerSymbol13 = {
+    type: "simple-marker",
+    color: [95, 225, 14],  // Green
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate13 = {
+    title: "Main Entrance",
+    content: "This is the main entrance for the park."
+ }
+ const attributes13 = {
+    Name: "Main Entrance",
+    Description: "This is the main entrance for the park."
+ }
+
+ const pointGraphic13 = new Graphic({
+    geometry: point13,
+    symbol: simpleMarkerSymbol13,
+    attributes: attributes13,
+    popupTemplate: popupTemplate13
+ });
+ graphicsLayer13.add(pointGraphic13);
+
+
+
+
+
+ // Point 14   Second Entrance
+ const graphicsLayer14 = new GraphicsLayer();
+ map.add(graphicsLayer14);
+
+ const point14 = { //Create a point
+    type: "point",
+    longitude: -111.65823008991934,
+    latitude: 33.190466186293186
+ };
+ const simpleMarkerSymbol14 = {
+    type: "simple-marker",
+    color: [95, 225, 14],  // Green
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate14 = {
+    title: "Second Entrance",
+    content: "This is the second entrance for the park."
+ }
+ const attributes14 = {
+    Name: "Second Entrance",
+    Description: "This is the second entrance for the park."
+ }
+
+ const pointGraphic14 = new Graphic({
+    geometry: point14,
+    symbol: simpleMarkerSymbol14,
+    attributes: attributes14,
+    popupTemplate: popupTemplate14
+ });
+ graphicsLayer14.add(pointGraphic14);
+
+
+
+
+
+ // Point 15    Gain the Courage -bench
+ const graphicsLayer15 = new GraphicsLayer();
+ map.add(graphicsLayer15);
+
+ const point15 = { //Create a point
+    type: "point",
+    longitude: -111.6512888263182,
+    latitude: 33.1726847855148
+ };
+ const simpleMarkerSymbol15 = {
+    type: "simple-marker",
+    color: [14, 225, 223],  // Cyan
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate15 = {
+    title: "Gain the Courage -bench",
+    content: "Being right before a long ,rocky, down hill, you would need to take advantage of this bench to gain the needed courage to continue."
+ }
+ const attributes15 = {
+    Name: "Gain the Courage -bench",
+    Description: "Being right before a long ,rocky, down hill, you would need to take advantage of this bench to gain the needed courage to continue."
+ }
+
+ const pointGraphic15 = new Graphic({
+    geometry: point15,
+    symbol: simpleMarkerSymbol15,
+    attributes: attributes15,
+    popupTemplate: popupTemplate15
+ });
+ graphicsLayer15.add(pointGraphic15);
+
+
+
+
+
+ // Point 16    Tortise Enclosure
+ const graphicsLayer16 = new GraphicsLayer();
+ map.add(graphicsLayer16);
+
+ const point16 = { //Create a point
+    type: "point",
+    longitude: -111.63531287737874,
+    latitude: 33.16755151099411
+ };
+ const simpleMarkerSymbol16 = {
+    type: "simple-marker",
+    color: [225, 20, 14 ],  // Red
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate16 = {
+    title: "Tortise Enclosure",
+    content: "At this spot there is a small enclosure with two Desert Tortises."
+ }
+ const attributes16 = {
+    Name: "Tortise Enclosure",
+    Description: "At this spot there is a small enclosure with two Desert Tortises."
+ }
+
+ const pointGraphic16 = new Graphic({
+    geometry: point16,
+    symbol: simpleMarkerSymbol16,
+    attributes: attributes16,
+    popupTemplate: popupTemplate16
+ });
+ graphicsLayer16.add(pointGraphic16);
+
+
+
+
+
+ // Point 17    Educational Building
+ const graphicsLayer17 = new GraphicsLayer();
+ map.add(graphicsLayer17);
+
+ const point17 = { //Create a point
+    type: "point",
+    longitude: -111.63545197823248,
+    latitude: 33.16794673303518
+ };
+ const simpleMarkerSymbol17 = {
+    type: "simple-marker",
+    color: [225, 20, 14 ],  // Red
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate17 = {
+    title: "Educational Building",
+    content: "Ask a park ranger any questions you like while also looking at all of the small criters this park has to offer. Also feel free to enjoy the gift shop."
+ }
+ const attributes17 = {
+    Name: "Educational Building",
+    Description: "Ask a park ranger any questions you like while also looking at all of the small criters this park has to offer. Also feel free to enjoy the gift shop."
+ }
+
+ const pointGraphic17 = new Graphic({
+    geometry: point17,
+    symbol: simpleMarkerSymbol17,
+    attributes: attributes17,
+    popupTemplate: popupTemplate17
+ });
+ graphicsLayer17.add(pointGraphic17);
+
+
+
+
+
+ // Point 18    'Oh Snap!'
+ const graphicsLayer18 = new GraphicsLayer();
+ map.add(graphicsLayer18);
+
+ const point18 = { //Create a point
+    type: "point",
+    longitude: -111.63921328401102,
+    latitude: 33.147450807636915
+ };
+ const simpleMarkerSymbol18 = {
+    type: "simple-marker",
+    color: [225, 20, 14 ],  // Red
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate18 = {
+    title: "'Oh, Snap!'",
+    content: "One of the most challenging spots in the whole park for bikers, this spot has earned its name."
+ }
+ const attributes18 = {
+    Name: "Oh, Snap!",
+    Description: "One of the most challenging spots in the whole park for bikers, this spot has earned its name."
+ }
+
+ const pointGraphic18 = new Graphic({
+    geometry: point18,
+    symbol: simpleMarkerSymbol18,
+    attributes: attributes18,
+    popupTemplate: popupTemplate18
+ });
+ graphicsLayer18.add(pointGraphic18);
+
+
+
+
+
+  // Point 19    Deepest Point
+  const graphicsLayer19 = new GraphicsLayer();
+ map.add(graphicsLayer19);
+
+ const point19 = { //Create a point
+    type: "point",
+    longitude: -111.67761326259547,
+    latitude: 33.143307628737674
+ };
+ const simpleMarkerSymbol19 = {
+    type: "simple-marker",
+    color: [225, 20, 14 ],  // Red
+    outline: {
+    color: [255, 255, 255], // White
+    width: 1
+    }
+ };
+
+ const popupTemplate19 = {
+    title: "Deepest Point",
+    content: "This is the deepest crossroads in the whole park. "
+ }
+ const attributes19 = {
+    Name: "Deepest Point",
+    Description: "This is the deepest crossroads in the whole park."
+ }
+
+ const pointGraphic19 = new Graphic({
+    geometry: point19,
+    symbol: simpleMarkerSymbol19,
+    attributes: attributes19,
+    popupTemplate: popupTemplate19
+ });
+ graphicsLayer19.add(pointGraphic19);
+
+
+
+
+
+
+ });
+</script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
