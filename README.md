@@ -2,7 +2,7 @@
 
 This project is my first attempt at using GIS mapping. For this project I created a map with twenty points at my favorite park. All of the light blue points represent benches, the green ones represent entrances, and the red ones are 'other'. Each point is clickable with a small pop-up discription of the spot.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/aqOsr7m7qOo)
 
 # Development Environment
 
